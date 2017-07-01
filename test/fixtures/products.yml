@@ -23,12 +23,12 @@ ruby:
 
 short_product_name:
   title: ShortName
-  description: a description for a book with a short name
+  description: A description for a book with a short name
   price: 10.00
   image_url: rails.png
 
 just_long_enough_name:
-  title: '1234567890'
-  description: a description for a book with a long name
+  title: 'Good Books'
+  description: A description for a book with a just long enough name
   price: 12.00
   image_url: rails.png
