@@ -5,4 +5,8 @@ class LineItem < ApplicationRecord
   def total_price
     price * quantity
   end
+
+  def pretty_name
+    "#{quantity} &times; #{product.title}"
+  end
 end
