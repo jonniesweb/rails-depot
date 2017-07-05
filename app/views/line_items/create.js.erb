@@ -3,7 +3,13 @@
 document.getElementById('cart').innerHTML = "<%=j render @cart %>";
 <% end %>
 
-// jquery method
+// jqery blind effect in the cart
+// doesn't work, bug: https://forums.pragprog.com/forums/398/topics/14734
+if ($('#cart tr').length == 1) {
+  $('#cart').show('blind',  1000);
+}
+
+// jquery method of document.getElementById
 $('#cart').html("<%=j render @cart %>");
 
 $('#current_item').css({ 'background-color':'#88ff88' }).animate({ 'background-color':'#114411' }, 1000);
