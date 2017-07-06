@@ -3,6 +3,8 @@
 document.getElementById('cart').innerHTML = "<%=j render @cart %>";
 <% end %>
 
+$('#notice').hide();
+
 // jqery blind effect in the cart
 // doesn't work, bug: https://forums.pragprog.com/forums/398/topics/14734
 if ($('#cart tr').length == 1) {
