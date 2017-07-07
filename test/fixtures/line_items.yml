@@ -9,3 +9,4 @@ two:
   product: ruby
   cart: one
   price: 20.00
+  order: one
