@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Book Depot Online Store</title>
+    <title><%= t('.title') %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,6 +10,12 @@
 
   <body class="<%= controller.controller_name %>">
     <div id="banner">
+      <%= form_with url: store_index_path, class: 'locale' do %>
+        <%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()' %>
+        <%= submit_tag 'submit' %>
+        <%= javascript_tag "$('.locale input').hide()" %>
+      <% end %>
+
       <%= image_tag 'logo.svg', alt: 'The pragmatic bookshelf' %>
       <span class="title"><%= @page_title %></span>
     </div>
@@ -22,7 +28,7 @@
         <% end %>
 
         <ul>
-          <li><%= link_to 'Home', store_index_path %></li>
+          <li><%= link_to t('.home'), store_index_path %></li>
         </ul>
 
         <% if session[:user_id] %>

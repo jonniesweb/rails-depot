@@ -30,4 +30,36 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  thanks: Thank you for your order
+  layouts:
+    application:
+      title: Book Depot Online Store
+      home: Home
+  store:
+    index:
+      title_html: Your Catalog
+      add_html: Add to Cart
+  carts:
+    cart:
+      title: Your Cart
+      empty: Empty Cart
+      checkout: Checkout
+  orders:
+    new:
+      legend: Please enter your details
+    form:
+      name: Name
+      address_html: Address
+      email: E-mail
+      pay_type: Pay with
+      pay_prompt_html: Select a payment method
+      submit: Place Order
+
+  number:
+    currency:
+      format:
+        unit: $
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
