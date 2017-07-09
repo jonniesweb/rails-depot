@@ -41,7 +41,7 @@ en:
       add_html: Add to Cart
   carts:
     cart:
-      title: Your Cart
+      title: Your cart
       empty: Empty Cart
       checkout: Checkout
   orders:
